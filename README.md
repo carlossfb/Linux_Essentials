@@ -1,27 +1,4 @@
 
-# Linux - Fundamentals
-
-Este repositório tem como objetivo trazer um compilado dos conhecimentos essenciais relacionados a utilização do Linux, assim como scripts úteis.
-
-## Tópicos abordados
-
-- Ubuntu: https://ubuntu.com/download/desktop
-- Linux Desktop (GUI)
-- Servidores Linux 
-- VirtualBox: https://www.virtualbox.org/wiki/Downloads
-- Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-
-- AWS (EC2): https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=pt_br#/start/email
-
-
-
-### Servidores Linux
-- Instâncias remotas com AWS (EC2) e Putty
-- Servidores de Arquivo (SAMPA)
-- Servidores Web (APACHE2)
-- Servidor de Banco de Dados (MySql)
-
-
 ## Configurando o ambiente de estudos VM
 
 Após a instalação do Virtual Box teremos algumas configurações que permitirão o funcionamento da nossa VM.
@@ -113,13 +90,17 @@ Salvamos alterações com CTRL+O e saímos com CTRL+X
 
 ## Usuários e grupos
 #### Super usuário - ROOT
- ```bash
+```bash
     sudo passwd root (aqui com passwd vamos atribuir uma senha ao root)
 ```
 Usuários onde o terminal identifica no final com $ são usuários comuns, o root é identificado com #.
 #### Criando usuários
-
+```bash
+    useradd nomeUser -c "Usuário Teste" -s /bin/bash -m -p $(openssl passwd Senha123) -e 
+    (-c serve para adicionar comentário, estamos colocando nome completo | -m cria o diretório do usuário na raiz | -s atribui um shell ao usuário, ajuda a identificar diretórios e arquivos através das cores do terminal no texto | -p é para definir senha | -e é para expirar a senha e pedir alteração, você pode colocar uma data também após um espaço em branco -e 30/01/2023 por exemplo)
+```
 #### Modificando usuários
+
 #### Deletando usuários
 #### Grupos
 #### Processos
@@ -130,8 +111,3 @@ Usuários onde o terminal identifica no final com $ são usuários comuns, o roo
 #### Arquivo
 #### Web
 #### Banco de dados
-
-## Dio - Digital Inovation One #Campus Expert - Turma4
-
-- [linkedin @carlossfb](https://www.linkedin.com/in/carlossfb/)
-

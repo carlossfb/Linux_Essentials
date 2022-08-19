@@ -100,12 +100,38 @@ Usuários onde o terminal identifica no final com $ são usuários comuns, o roo
     (-c serve para adicionar comentário, estamos colocando nome completo | -m cria o diretório do usuário na raiz | -s atribui um shell ao usuário, ajuda a identificar diretórios e arquivos através das cores do terminal no texto | -p é para definir senha | -e é para expirar a senha e pedir alteração, você pode colocar uma data também após um espaço em branco -e 30/01/2023 por exemplo)
 ```
 #### Modificando usuários
-
+```bash
+  usermod -G adm,sudo nomeUser (o -G maiúsculo indica que iremos adicionar o usuário a mais grupos de usuário, se for só um tem o -g, se eu quiser alterar o bash uso -s, -c o comentário com o nome por ex e por aí vai, se for a senha é só usar o passwd mesmo)
+```
 #### Deletando usuários
+```bash
+  userdel -r (apaga o usuário e a pasta dele, pode adicionar -f pra forçar)  
+```
 #### Grupos
+```bash
+  groupadd GRP_NOME (adicionar um grupo com nome GRP_NOME)
+  groupdel GRP_NOME (deleta o grupo)
+  gpasswd -d nomeUser (remove o usuário do grupo)
+```
 #### Processos
+  Similar ao gerenciador de tarefas do Windows, podemos matar processos em execução.
+```bash
+  ps aux (A todos os usuários U nome do user e hora de início X inclui processos fora do console)
+  kill idProcesso (mata o processo pelo ID mostrado no comando anterior)
+  Killall nomeProcesso (mata os processos com X nome, observe o nome no comando PS)
+  w (permite que veja os usuários iniciados no sistema, acessos que não deveriam estar lá podem ser matados com KILL retirando o user de atividade)
+  kill PID (PID é a numeração que identifica a sessão do usuário e é verificado com o comando anterior)
+```
 #### Permissões
-
+  DRWX RWX RWX - nos diretórios usando um ls -l para verificar, podemos observar as permissões do diretório para o DONO, GRUPO, e DEMAIS usuários.
+Repare que a primeira parte se dirige ao DONO e ele tem R(Leitura), W(Gravação), X(Execução), em resumo, pode fazer tudo.
+- R=4
+- W=2 
+- X=1 
+#### (essas numerações me permitem alterar os níveis de permissão dos diretórios.
+```bash
+  chmod 750 /adm/ (aqui temos o diretório ADM na raiz do Linux, alteramos a permissão para TOTAL para o dono "4+2+1" e para o GRUPO parcial (4+1), por fim, os demais não tem acesso "0".
+```
 
 ## Servidores
 #### Arquivo

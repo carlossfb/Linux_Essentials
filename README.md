@@ -130,7 +130,7 @@ Repare que a primeira parte se dirige ao DONO e ele tem R(Leitura), W(Gravação
 - X=1 
 #### (essas numerações me permitem alterar os níveis de permissão dos diretórios.
 ```bash
-  chmod 750 /adm/ (aqui temos o diretório ADM na raiz do Linux, alteramos a permissão para TOTAL para o dono "4+2+1" e para o GRUPO parcial (4+1), por fim, os demais não tem acesso "0".
+  chmod 750 /adm/ (aqui temos o diretório ADM na raiz do Linux, alteramos a permissão para TOTAL para o dono "4+2+1" e para o GRUPO parcial "4+1", por fim, os demais não tem acesso "0".
 ```
 
 ## Servidores

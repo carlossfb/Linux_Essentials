@@ -1,5 +1,5 @@
 
-## Configurando o ambiente de estudos VM
+## Configurando o ambiente de estudos na VM
 
 Após a instalação do Virtual Box teremos algumas configurações que permitirão o funcionamento da nossa VM.
 Execute o CMD como administrador e coloque:

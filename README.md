@@ -1,3 +1,24 @@
+# Linux - Fundamentals
+
+Este repositório tem como objetivo trazer um compilado dos conhecimentos essenciais relacionados a utilização do Linux, assim como scripts úteis.
+
+## Tópicos abordados
+
+- Ubuntu: https://ubuntu.com/download/desktop
+- Linux Desktop (GUI)
+- Servidores Linux 
+- VirtualBox: https://www.virtualbox.org/wiki/Downloads
+- Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+- AWS (EC2): https://portal.aws.amazon.com/billing/signup?nc2=h_ct&src=header_signup&redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation&language=pt_br#/start/email
+
+
+
+### Servidores Linux
+- Instâncias remotas com AWS (EC2) e Putty
+- Servidores de Arquivo (SAMPA)
+- Servidores Web (APACHE2)
+- Servidor de Banco de Dados (MySql)
 
 ## Configurando o ambiente de estudos na VM
 

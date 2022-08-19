@@ -4,9 +4,8 @@ Este repositório tem como objetivo trazer um compilado dos conhecimentos essenc
 
 ## Tópicos abordados
 
-- Ubuntu: https://ubuntu.com/download/desktop
-- Linux Desktop (GUI)
-- Servidores Linux 
+- Ubuntu Desktop: https://ubuntu.com/download/desktop
+- Ubuntu Server: https://ubuntu.com/download/server 
 - VirtualBox: https://www.virtualbox.org/wiki/Downloads
 - Putty: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
 

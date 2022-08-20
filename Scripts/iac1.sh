@@ -15,17 +15,17 @@ groupadd GRP_SEC
 
 echo "Criando users..."
 
-useradd carlos -c "Carlos Eduardo" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_ADM -e
-useradd maria -c "Maria Silva" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_ADM -e
-useradd joao -c "João Pedro" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_ADM -e
+useradd carlos -c "Carlos Eduardo" -m -s /bin/bash -p Mudar123 -G GRP_ADM 
+useradd maria -c "Maria Silva" -m -s /bin/bash -p Mudar123 -G GRP_ADM -e
+useradd joao -c "João Pedro" -m -s /bin/bash -p Mudar123 -G GRP_ADM -e
 
-useradd debora -c "Debora Cristina" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_VEN -e
-useradd sebastiana -c "Sebastiana Santos" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_VEN -e
-useradd roberto -c "Roberto Romeu" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_VEN -e
+useradd debora -c "Debora Cristina" -m -s /bin/bash -p Mudar123 -g GRP_VEN 
+useradd sebastiana -c "Sebastiana Santos" -m -s /bin/bash -p Mudar123 -g GRP_VEN 
+useradd roberto -c "Roberto Romeu" -m -s /bin/bash -p Mudar123 -G GRP_VEN 
 
-useradd josefina -c "Josefina Fiocruz" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_SEC -e
-useradd amanda -c "Amanda Memes" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_SEC -e
-useradd rogerio -c "Rogerio Senna" -m -s /bin/bash -p md5sum|Mudar123 -g GRP_SEC -e
+useradd josefina -c "Josefina Fiocruz" -m -s /bin/bash -p Mudar123 -g GRP_SEC 
+useradd amanda -c "Amanda Memes" -m -s /bin/bash -p Mudar123 -G GRP_SEC 
+useradd rogerio -c "Rogerio Senna" -m -s /bin/bash -p Mudar123 -G GRP_SEC 
 
 echo "Alterando permissoes..."
 

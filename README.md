@@ -55,7 +55,7 @@ Devem ser conhecidos:
 ```bash
     find nomeArquivo.txt
     find nomeArquivo*(pesquisar por nome, independente da extensão)
-    find ??c(pesquisar por um nome onde o terceiro caractere é C)
+    find ??c*(pesquisar por um nome onde o terceiro caractere é C)
     find *.txt(pesquisar todos arquivos de X extensão)
 ```
 #### Abrir arquivo de texto

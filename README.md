@@ -248,3 +248,69 @@ Após isso precisamos reiniciar o SAMBA para funcionarem as alterações:
 APACHE
 #### Banco de dados
 MySQL
+
+
+## Apêndice
+
+Links úteis
+ 
+
+O que é o Linux?
+https://www.vivaolinux.com.br/linux/
+
+https://www.redhat.com/pt-br/topics/linux/what-is-linux
+
+
+O que é virtualização?
+https://www.techtudo.com.br/listas/2020/07/o-que-e-virtualizacao-entenda-como-funciona-o-processo-no-pc.ghtml
+
+https://www.redhat.com/pt-br/topics/virtualization/what-is-virtualization
+
+
+O que é Cloud Computing?
+https://aws.amazon.com/pt/what-is-cloud-computing/
+
+https://azure.microsoft.com/pt-pt/resources/cloud-computing-dictionary/what-is-the-cloud/
+
+Mais informações sobre o gerenciamento de pacotes:
+https://docente.ifrn.edu.br/filiperaulino/disciplinas/isa-redes2n/linux-07-gerencia-de-pacotes
+https://pt.linux-console.net/?p=1516
+
+
+Mais informações sobre processos no Linux:
+https://www.infowester.com/linprocessos.php#:~:text=Um%20PID%20(Process%20Identifier)%20%C3%A9,mais%20processos%20ao%20mesmo%20tempo.
+
+ O que são servidores?
+https://www.qnapbrasil.com.br/blog/post/o-que-e-servidor-armazenamento-de-dados
+
+ 
+
+Modelo cliente-servidor
+https://www.gta.ufrj.br/ensino/eel878/redes1-2016-1/16_1/p2p/modelo.html
+ 
+
+
+Distribuições linux para programadores
+
+https://sempreupdate.com.br/melhores-distribruicoes-linux-para-programar/
+
+https://programadorviking.com.br/linux-para-desenvolvedores-as-13-melhores-distros-para-programar/
+
+ 
+Aplicativos para Linux
+
+https://sempreupdate.com.br/melhores-aplicativos-do-ubuntu-que-voce-deveria-usar/
+
+ 
+Site oficial do Apache
+https://www.apache.org/
+
+
+Site oficial do SAMBA
+https://www.samba.org/
+
+ 
+
+Site oficial do Mysql
+https://www.mysql.com/
+

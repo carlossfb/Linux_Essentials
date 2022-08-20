@@ -45,7 +45,7 @@ O diretório de todo usuário linux é identificado como home, a navegação se 
     cd ~ (atalho para ir para o diretório do user)
     pwd (nos mostra em detalhes o diretório atual, caminho da raiz até ele e afins)
 ```
-diretórios que devem ser conhecidos:
+Devem ser conhecidos:
 - /etc/passwd (Aprofundaremos no tópico Usuários)
 - /etc/group (Aprofundaremos no tópico Usuários)
 - /etc/fstab (Aprofundaremos no tópico Servidores)
@@ -106,9 +106,14 @@ Salvamos alterações com CTRL+O e saímos com CTRL+X
  ```bash
     rm nomeArquivo.txt
     rmdir nomeDiretorio
+    rmdir -rf (força a exclusão de diretórios e seus conteúdos)
 ```
 
 ## Usuários e grupos
+diretórios que devem ser conhecidos:
+
+##### cat /etc/passwd (Ajudará a visualizar os usuários existentes, assim como no cd /home, utilizando o ls poderá ver seus respectivos diretórios)
+
 #### Super usuário - ROOT
 ```bash
     sudo passwd root (aqui com passwd vamos atribuir uma senha ao root)
@@ -116,8 +121,8 @@ Salvamos alterações com CTRL+O e saímos com CTRL+X
 Usuários onde o terminal identifica no final com $ são usuários comuns, o root é identificado com #.
 #### Criando usuários
 ```bash
-    useradd nomeUser -c "Usuário Teste" -s /bin/bash -m -p $(openssl passwd Senha123) -e 
-    (-c serve para adicionar comentário, estamos colocando nome completo | -m cria o diretório do usuário na raiz | -s atribui um shell ao usuário, ajuda a identificar diretórios e arquivos através das cores do terminal no texto | -p é para definir senha | -e é para expirar a senha e pedir alteração, você pode colocar uma data também após um espaço em branco -e 30/01/2023 por exemplo)
+    useradd nomeUser -c "Usuário Teste" -s /bin/bash -m -p Senha123 -G GRP_NOME
+    (-c serve para adicionar comentário, estamos colocando nome completo | -m cria o diretório do usuário na raiz | -s atribui um shell ao usuário, ajuda a identificar diretórios e arquivos através das cores do terminal no texto | -p é para definir senha | -G para definir um grupo ao qual pertencerá)
 ```
 #### Modificando usuários
 ```bash
@@ -128,6 +133,10 @@ Usuários onde o terminal identifica no final com $ são usuários comuns, o roo
   userdel -r (apaga o usuário e a pasta dele, pode adicionar -f pra forçar)  
 ```
 #### Grupos
+diretórios que devem ser conhecidos:
+
+##### cat /etc/group (Permitirá ter uma visão geral dos grupos criados e usuários pertencentes a eles) 
+
 ```bash
   groupadd GRP_NOME (adicionar um grupo com nome GRP_NOME)
   groupdel GRP_NOME (deleta o grupo)

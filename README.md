@@ -162,6 +162,44 @@ Repare que a primeira parte se dirige ao DONO e ele tem R(Leitura), W(Gravação
   chmod 750 /adm/ (aqui temos o diretório ADM na raiz do Linux, alteramos a permissão para TOTAL para o dono "4+2+1" e para o GRUPO parcial "4+1", por fim, os demais não tem acesso "0".
 ```
 
+## Discos
+##### /etc/fstab -> Aqui temos o local onde declararemos os discos que devem ser montados
+
+#### Visualizando discos
+```bash
+  lsblk (lista os discos existentes, os identificados como loop são discos virtuais, os fisicos sao identificados como sdb ou sda, sdb1, sda1 e por aí vai)
+  fdisk -l (mostra os discos de forma mais organizada e permite identificar o local do disco mais facilmente)
+```
+identificado o disco e seu local, partiremos para o particionamento:
+```bash
+  fdisk /dev/sbd (caminho identificado usando o comando fdisk -l, se precisar use o m para ter help)
+```
+Com a ajuda do help usei "n" nova partição "p" primaria "1" numeração "w" salvar.
+
+##### Hora de indicar o formato de arquivos que será usado no disco
+
+```bash
+   mkfs.ext4 /dev/sdb (depois do . indicar o formato, poderia ser ntfs)
+```
+##### Vamos montar o disco
+
+Os discos no linux geralmente são montados na raiz em uma pasta chamada "mnt", então bora lá:
+
+```bash
+   cd /mnt
+   mkdir disco2 (vou criar o diretório do segundo disco aqui)
+   mount /dev/sdb/ /mnt/disco2 (montamos o disco na pasta disco2)
+   umount /dev/sdb (desmontamos o disco, os arquivos não foram perdidos, mas precisamos montar se quisermos usar)
+```
+Hora de automatizar a montagem dos discos no arquivo devido:
+```bash
+   nano /etc/fstab (aqui colocamos os discos que devem ser montados automaticamente quando ligarmos a maquina)
+```
+###### Dentro do arquivo, no final coloque: disco_a_montar pasta formato defaults 0 0
+Ficaria assim: /dev/sdb /mnt/disco2 ext4 defaults 0 0
+
+Com isso, agora ao reiniciar o computador seus discos serão montados automaticamente!!
+
 ## Servidores
 #### Arquivo
 SAMBA -> Utilizaremos o Samba para criar o compartilhamento da pasta em um disco sob controle do servidor para demais usuários, lembrando que não deve ser feito no mesmo disco onde está o sistema operacional, nós usaremos o disco externo montado DISK2.

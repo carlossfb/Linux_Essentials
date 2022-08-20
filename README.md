@@ -51,6 +51,10 @@ Devem ser conhecidos:
 - /etc/fstab (Aprofundaremos no tópico Servidores)
 
 ## Arquivos e Pastas
+#### Executar arquivos
+```bash
+  ./executavel.sh (./ faz a mágica, lembre que o arquivo precisa ter permissão de execução para você, se n tiver, só usar o chmod +x executavel.sh)
+```
 #### Buscar arquivos
 ```bash
     find nomeArquivo.txt

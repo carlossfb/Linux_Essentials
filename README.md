@@ -164,5 +164,40 @@ Repare que a primeira parte se dirige ao DONO e ele tem R(Leitura), W(Gravação
 
 ## Servidores
 #### Arquivo
+SAMBA -> Utilizaremos o Samba para criar o compartilhamento da pasta em um disco sob controle do servidor para demais usuários, lembrando que não deve ser feito no mesmo disco onde está o sistema operacional, nós usaremos o disco externo montado DISK2.
+
+```bash
+  apt samba -y (-y é para já avançar as perguntas durante a instalação com yes)
+```
+
+Após a instalação do SAMBA nós iremos criar uma pasta com nome "publica" no disk2.
+
+```bash
+  mkdir publica (aqui já estamos dentro de disk2)
+  chmod 777 /publica (alterando permissao dos usuarios)
+```
+##### Configuraremos agora o arquivo de configuração do SAMBA -> /etc/samba/smb.conf
+
+No fim do arquivo criaremos o compartilhamento
+
+```bash
+   [publica] (nome do compartilhamento)
+   
+   path = /disk2/publica (caminho da pasta)
+   writable = yes (dizemos aqui que podem gravar na pasta)
+   guest ok = yes (dizemos que as todas pessoas tem acesso a pasta)
+   guest only = yes (dizemos que todos que acessarem são convidados)
+```
+Após isso precisamos reiniciar o SAMBA para funcionarem as alterações:
+
+```bash
+  systemctl restart smbd (pode usar o mesmo comando substituindo restart por status para ver se ta ok)
+  systemctl enable smbd (para quando reiniciar o serviço já estar rodando)
+```
+  PS=daemon são os serviços de segundo plano, assim como o samba, por isso o smb tem um D no final.
+  Agora só criar um caminho de rede ou acessar no windows o ip do host + o nome da pasta para testar o caminho (\\10.0.0.19\publica) e se pedir credencial é só usar um user criado no linux.
+  
 #### Web
+APACHE
 #### Banco de dados
+MySQL

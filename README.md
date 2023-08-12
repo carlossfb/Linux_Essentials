@@ -55,6 +55,12 @@ Devem ser conhecidos:
 ```bash
   ./executavel.sh (./ faz a mágica, lembre que o arquivo precisa ter permissão de execução para você, se n tiver, só usar o chmod +x executavel.sh)
 ```
+#### Permissões
+Temos algumas letras que podemos utilizar ao invés dos numéricos 777 para permissões completas por exemplo, "o", "u" e "g", que significam respectivamente "outros", "usuario", "grupo", enquanto leitura, escrita e execução seriam "r", "w" e "x"
+```bash
+  sudo chmod o-r secret_folder/ (remover leitura de todos os usuários, o O significa "outros")
+  sudo chmod g+w secret_folder/ (adicionar escrita ao grupo)
+```
 #### Dono dos arquivos ou pastas
 ```bash
   chown root:GRP_ADM /adm (aqui estou atribuindo o root como dono do diretório adm e grupo adm)
